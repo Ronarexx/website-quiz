@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="" type="text/css" rel="stylesheet">
+
+	<!-- Optional JavaScript -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/underscore-1.8.3.min.js"></script>
+	<script src="js/quiz.js"></script>
+	<!-- Optional JavaScript -->
+
+	<title>Meetup Quiz</title>
+</head>
+<body>
+	<header>
+		<div class="col-md-12 col-sm-12 text-center div-center">
+			<div id="title-div">
+				<img src="img/thinking-face.png">
+				<img src="img/direct-hit.png">
+				<h1>Meetup Quiz</h1>
+				<h3>Conociendo de Blockchain</h3>
+				<h3>de la mano de æternity</h3>
+			</div>
+		</div>
+	</header>
+
+<div id="myDIV" >
+			<form>
+				<div class="form-row">
+						<div class="col">
+								<input type="text" id="regName" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="col">
+								<input type="text" id="regLastName" class="form-control" placeholder="Apellido" required>
+						</div>
+				</div>
+			</form>
+			<div>
+        <button id="registerBtn" class="btn btn-block">Registro</button>
+			</div>
+</div>
+
+
+	<script id="template" type="x-tmpl-mustache">
+		{{#userArray}}
+
+		<div class="card">
+			<h5>{{creatorName}} {{LastName}}</h5>
+		</div>
+
+    {{/userArray}}
+	</script>
+
+	<div id="myDIV2" >
+		<div id="userBody">
+		</div>
+		<header>
+			<div class="countdown"><span class="time_left">12s</span></div>
+			<div class="points"><span class="points">0 points</span></div>
+		</header>
+		<div class="start">
+			<div class="card">
+				<p>¿Listo para comenzar?</p>
+				<button class="start">Comenzar</button>
+			</div>
+		</div>
+		<div class="play">
+			<div class="questions"></div>
+		</div>
+		<div class="finish card">
+			<p class="times_up">¡Se acabó el tiempo!</p>
+			<p>Has obtenido</p>
+			<p class="final_points">8 puntos</p>
+			<div class="play_again">
+				<button>Volver a intentar</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js">
+	</script>
+	<script src="js/index.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous">
+	</script>
+</body>
+</html>
